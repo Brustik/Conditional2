@@ -24,17 +24,23 @@ public class Main {
 
         //Задание 3
         System.out.println("Задание 3");
-        int year=2021;
+        int year = 2021;
         int divisionFour = year % 4; //остаток деления на 4
         int divisionHundred = year % 100; //остаток деления на 100
         int divisionFourHundred = year % 400;
-        if (divisionFour == 0) {
-
+        if (divisionFourHundred == 0 && divisionHundred == 0) {
+            System.out.println(year + " год является високосным");
+        } else if (divisionFour == 0 && divisionHundred > 0) {
+            System.out.println(year + " год является високосным");
+        } else if (divisionHundred == 0) {
+            System.out.println(year + " год является невисокосным");
+        } else {
+            System.out.println(year + " год является невисокосным");
         }
 
 
         //Задание 4
-        System.out.println("Задаине 4");
+        System.out.println("Задание 4");
         int deliveryDistance = 95;
         int deliveryDays = 0;
         if (deliveryDistance <= 20) {
@@ -49,7 +55,7 @@ public class Main {
         System.out.println("Потребуется дней: " + deliveryDays);
 
         //Задаине 5
-        System.out.println("Задаине 5");
+        System.out.println("Задание 5");
         int monthNumber = 12;
         switch (monthNumber) {
             case 1:
